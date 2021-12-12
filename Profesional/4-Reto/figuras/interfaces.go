@@ -9,7 +9,7 @@ type geometria interface {
 	perimetro() float64
 }
 
-func MedidasGeometricas(g Geometria) {
+func MedidasGeometricas(g geometria) {
 	fmt.Println("Area:", g.area())
 	fmt.Println("Perimetro: ", g.perimetro())
 }
