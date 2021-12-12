@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"packages/figuras"
 	"packages/models"
-
-	"github.com/donvito/hellomod"
 )
 
 func main() {
@@ -15,7 +13,6 @@ func main() {
 
 	cua := figuras.Cuadrado{5.6}
 	figuras.MedidasGeometricas(&cua)
-	hellomod.SayHello()
 
 	per1 := models.Persona{}
 	per1.Constructor("Giovanny", 37)
