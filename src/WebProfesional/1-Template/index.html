@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h3>Nombre {{ .UserName }} Edad {{ .Edad }}</h3>
+
+    <!-- {{ with $valor := "Mi Variable"}}
+        <p>{{ $valor }}</p>
+    {{ end }} -->
+
+    <h1> USUARIOS </h1>
+    <!-- Operadores logico
+        not !
+        and &&
+        or  ||
+    -->
+    {{ if not .Activo }}
+        <p>El usuario {{ .UserName }} esta Activo</p>
+    {{ else }}
+        <p>El usuario {{ .UserName }} NO esta activo.</p>
+    {{ end }}
+
+    {{ if (and .Activo .Admin) }}
+        <p>Es Aministrador</p>
+    {{ end }}
+    <!-- Operadores condicionales
+        eq      ==
+        ne      !=
+        lt      <
+        le      <=
+        gt      >=
+        ge      >=
+    -->
+    {{ if ( ge .Edad 20) }}
+        <p>Ya no es Adolescente</p>
+    {{ else }}
+        <p>Es adolescente</p>
+    {{ end }}
+    <!-- Bucles -->
+    <ul>
+    {{ range .Cursos }}
+        <li>{{ .Nombre }}</li>
+    {{ end }}
+    </ul>
+</body>
+</html>
