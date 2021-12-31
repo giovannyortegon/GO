@@ -8,7 +8,7 @@ import (
 )
 
 //username:password@tcp(localhost:3306)/database
-const url = "skill:xxxxx@tcp(localhost:3306)/goweb_db"
+const url = "xxxxx:xxxxx@tcp(localhost:3306)/goweb_db"
 
 var db *sql.DB
 
