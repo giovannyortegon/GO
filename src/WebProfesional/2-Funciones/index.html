@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ saludar "Giovanny" }}</h1>   
+
+    <!-- <h1>{{ saludar "Giovanny" }}</h1>    -->
+    {{ template "header" }}
+    <h2>User: {{ .UserName }}</h2>
+    <h2>Edad: {{ .Edad }}</h2>
+    {{  }}
 </body>
 </html>
